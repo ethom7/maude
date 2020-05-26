@@ -19,9 +19,9 @@ class SearchBar extends React.Component {
         // current functionality only supports GeoIP,
         // but really easy to refactor the backend script and give it a new endpoint to extend the whois api
         this.sortByOptions = {
-            'GeoIP': 'datalookup',
+            'GeoIP': 'datalookup'/*,
             'WhoIs': 'whois',
-            'GeoIP and WhoIs': 'both'
+            'GeoIP and WhoIs': 'both'*/
         };
     }
 
@@ -41,7 +41,7 @@ class SearchBar extends React.Component {
     }
 
     handleSearch(event) {
-        this.props.searchYelp(this.state.term, this.state.sortBy);
+        this.props.searchAddress(this.state.term, this.state.sortBy);
 
         event.preventDefault();
     }

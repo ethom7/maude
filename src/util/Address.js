@@ -1,4 +1,4 @@
-const Yelp = {
+const Address = {
     search(term, sortBy) {
         return fetch(`https://cors-anywhere.herokuapp.com/https://vylwyqxl3e.execute-api.us-west-2.amazonaws.com/beta/${sortBy}?ipAddress=${term}`).then(response => {
             return response.json();
@@ -17,4 +17,4 @@ const Yelp = {
     }
 };
 
-export default Yelp;
+export default Address;

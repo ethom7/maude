@@ -4,7 +4,7 @@ import './App.css';
 import BusinessList from '../BusinessList/BusinessList';
 import SearchBar from '../SearchBar/SearchBar';
 
-import Yelp from '../../util/Yelp';
+import Address from '../../util/Address';
 
 class App extends React.Component {
     constructor(props) {
@@ -14,11 +14,11 @@ class App extends React.Component {
             businesses: []
         };
 
-        this.searchYelp = this.searchYelp.bind(this);
+        this.searchAddress = this.searchAddress.bind(this);
     }
 
-    searchYelp(term, sortBy) {
-        Yelp.search(term, sortBy).then(businesses => {
+    searchAddress(term, sortBy) {
+        Address.search(term, sortBy).then(businesses => {
             this.setState({businesses: businesses});
         });
     }
@@ -28,7 +28,7 @@ class App extends React.Component {
             <div className="App">
                 <h1>mildred</h1>
                 <h3>find the tree through the forest</h3>
-                <SearchBar searchYelp={this.searchYelp} />
+                <SearchBar searchAddress={this.searchAddress} />
                 <BusinessList businesses={this.state.businesses} />
             </div>
         );
