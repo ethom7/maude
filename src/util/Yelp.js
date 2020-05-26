@@ -1,5 +1,3 @@
-//const apiKey = 'yepXQG9L292fbUwddZvDRydl_4DKnrVOFBMR_DQwIzPpkCae5LS0FnR3GTKDDnNzaCO1HZMBEQokYxj4fX-_Y6L6Qm1xbKleBjHTOpNBlOa6G_ETuh513QP0awPMXnYx'; // Insert API key here.
-
 const Yelp = {
     search(term, sortBy) {
         return fetch(`https://cors-anywhere.herokuapp.com/https://vylwyqxl3e.execute-api.us-west-2.amazonaws.com/beta/${sortBy}?ipAddress=${term}`).then(response => {
